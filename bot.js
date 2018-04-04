@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-bot.on('ready', () => {
+client.on('ready', () => {
     console.log('I am ready!');
 });
 
 const prefix = "~";
 
-bot.on('message', message => {
+client.on('message', message => {
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
     
@@ -20,4 +20,5 @@ bot.on('message', message => {
   	}
 });
 
-bot.login('BOT_TOKEN');
+// THIS  MUST  BE  THIS  WAY
+client.login(process.env.BOT_TOKEN);
