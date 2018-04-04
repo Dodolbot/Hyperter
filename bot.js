@@ -5,14 +5,9 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-const prefix = "~";
-
-bot.on('message', message => {
-    if(message.author.bot) return;
-    if(!message.content.startsWith(prefix)) return;
-    
-    if (message.content.startsWith(prefix + "ping")) {
-        message.channel.sendMessage("Pong");
+client.on('message', message => {
+    if (message.content === 'ping') {
+    	message.reply('pong');
   	}
 });
 
