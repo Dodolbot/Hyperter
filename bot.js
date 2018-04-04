@@ -13,7 +13,6 @@ client.on('message', message => {
     
     let command = messsage.content.spllit(" ")[0];
     command = command.slice(prefix.length);
-    console.log(command);
     
     let args = message.content.split(" ").slice(1);
     
