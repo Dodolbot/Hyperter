@@ -16,15 +16,15 @@ client.on('message', message => {
     
     let args = message.content.split(" ").slice(1);
     
-    if (command === "say") {
+    if (nessage.content.startsWith(prefix + "say")) {
         message.channel.sendMessage(args.join(" "));
     }
     
-    if (command === "ping") {
+    if (nessage.content.startsWith(prefix + "ping")) {
         message.channel.sendMessage("pong!");
     } else
     
-    if (command === "foo") {
+    if (nessage.content.startsWith(prefix + "foo")) {
         message.channel.sendMessage("bar!");
   	}
 });
