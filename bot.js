@@ -17,15 +17,15 @@ client.on('message', message => {
     
     let args = message.content.split(" ").slice(1);
     
-    id (command = "say") {
+    if (command === "say") {
         message.channel.sendMessage(args.join(" "));
     }
     
-    if (command = "ping") {
+    if (command === "ping") {
         message.channel.sendMessage("pong!");
     } else
     
-    if (command = "foo") {
+    if (command === "foo") {
         message.channel.sendMessage("bar!");
   	}
 });
