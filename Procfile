@@ -1,1 +1,1 @@
-worker: node verter.py
+worker: node index.js
