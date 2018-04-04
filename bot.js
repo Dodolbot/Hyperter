@@ -5,11 +5,15 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
+const prefix = "~";
+
+bot.on('message', message => {
+    if(message.author.bot) return;
+    if(!message.content.startsWith(prefix)) return;
+    
+    if (message.content.startsWith(prefix + "ping")) {
+        message.channel.sendMessage("Pong");
   	}
 });
 
-// THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
