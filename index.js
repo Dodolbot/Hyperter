@@ -26,7 +26,7 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-bot.on("ready", async () => {
+client.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
   bot.user.setActivity("tutorials on TSC", {type: "WATCHING"});
@@ -34,7 +34,7 @@ bot.on("ready", async () => {
 });
 
 
-bot.on("message", async message => {
+client.on("message", async message => {
 
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
@@ -122,4 +122,4 @@ bot.on("message", async message => {
 
 });
 
-bot.login(tokenfile.token);
+client.login(process.env.BOT_TOKEN);
