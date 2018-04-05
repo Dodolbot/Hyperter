@@ -21,7 +21,7 @@ client.on('message', message => {
 
     }
     
-        if (msg === prefix + 'invite') { 
+        if (msg === prefix + 'INVITE') { 
 
         message.channel.send('```Kamu ingin invite bot ini ke server kamu ? \n Silahkan masuk ke link dibawah \n \n Invite link: \n https://discordapp.com/oauth2/authorize?client_id=430984607832211456&scope=bot&permissions=8```');
 
