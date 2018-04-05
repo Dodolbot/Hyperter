@@ -42,8 +42,8 @@ client.on('message', message => {
 
             message.channel.bulkDelete(fetched)
                 .catch(error => message.channel.send(`Error: ${error}`)); 
-            message.channel.send(""""```css
-Chat telah di bersihkan !```"""); 
+            message.channel.send(''' ```css
+                                 Chat telah di bersihkan !``` '''); 
 
         }
 
