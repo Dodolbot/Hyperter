@@ -20,6 +20,13 @@ client.on('message', message => {
         message.channel.send('Ping!'); 
 
     }
+    
+    
+    if (msg === prefix + 'INFO') { 
+
+        message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n Hai. selamat datang di HyPerter [BOT] \n Bot ini masih dalam uji test jadi tolong supportnya ya :D \n \n Created by: VerterID \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-'); 
+        
+    }
 
 
     if (msg.startsWith(prefix + 'PURGE')) { 
@@ -48,6 +55,9 @@ client.on('message', message => {
 
         purge(); 
     }
+    
+    
+    
 });
 
 client.login(process.env.BOT_TOKEN);
