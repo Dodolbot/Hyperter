@@ -29,8 +29,9 @@ client.on('message', message => {
     }
     
     if (msg === prefix + 'HELP') {
-        message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n ~Clear = Untuk membersihkan chat di channel ! \n ~Ping = Untuk menyetabilkan ping kamu ! \n \n Jika kamu perlu bantuan ketikan command: ~help \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ```');
-
+        message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n -Clear = Untuk membersihkan chat di channel ! \n -Ping = Untuk menyetabilkan ping kamu ! \n \n Jika kamu perlu bantuan ketikan command: -help \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ```');
+     
+    }
 
     if (msg.startsWith(prefix + 'PURGE')) { 
 
