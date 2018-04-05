@@ -4,10 +4,6 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
     
-    client.user.setGame("Gunakan Code | -");
-    client.user.setStatus("Online");
-
-    
 });
 
 const prefix = "-";
