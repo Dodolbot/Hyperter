@@ -12,20 +12,12 @@ client.on('message', message => {
     let msg = message.content.toUpperCase(); 
     let sender = message.author;
     let cont = message.content.slice(prefix.length).split(" ");
+    let args = cont.slice(1);
 
-    let command = message.content.split(" ")[0];
-    command = command.slice(prefix.length);
-    
-    let args = message.content.split(" ").slice(1);
 
     if (msg === prefix + 'PING') { 
 
         message.reply('**Ping telah distabilkan** !!'); 
-
-    }
-    
-    if (msg === prefix + 'SAY') {
-        message.channel.sendMessage(args.join(" "));
         
     }
     
@@ -76,6 +68,18 @@ client.on('message', message => {
         purge(); 
     }
     
+client.on('message', message => {
+    if (message.author.bot) return;
+    if (!message.content.startsWith(prefix)) return;
+    
+    let command = message.content.split(" ")[0];
+    command = command.slice(prefix.length);
+    
+    let args = message.content.split(" ").slice(1);
+
+    if (msg === prefix + 'SAY') {
+        message.channel.sendMessage(args.join(" "));
+    }
     
     
 });
