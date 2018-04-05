@@ -3,6 +3,9 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
+    
+    bot.user.setGame('lol')
+
 });
 
 const prefix = "-";
@@ -69,14 +72,5 @@ client.on('message', message => {
     
     
 });
-
-client.on('ready', () => {
-    console.log('bot launched..');
-    
-    bot.user.setStatus('Online')
-    
-    bot.user.setGame('Gunakan Command | -')
-    
- });
 
 client.login(process.env.BOT_TOKEN);
