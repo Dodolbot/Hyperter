@@ -15,7 +15,7 @@ client.on('message', message => {
     command = command.slice(prefix.length);
     
     if (command === "ping") {
-    	message.channel.sendMessage("pong");
+    	message.replay("**Internet di stabilkan !!**");
   	}
 });
 
