@@ -27,8 +27,8 @@ client.on('message', message => {
         async function purge() {
             message.delete(); 
 
-            if (!message.member.roles.find("name", "bot-commander")) { 
-                message.channel.send('You need the \`bot-commander\` role to use this command.'); 
+            if (!message.member.roles.find("name", "MOD")) { 
+                message.channel.send('You need the \`MOD\` role to use this command.'); 
                 return; 
             }
 
