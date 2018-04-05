@@ -5,19 +5,6 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-module.exports.run = async (bot, message, args) => {
-
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MESSAGES");
-  if(!args[0]) return message.channel.send("oof");
-  message.channel.bulkDelete(args[0]).then(() => {
-    message.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(5000));
-  });
-}
-
-module.exports.help = {
-  name: "clear"
-}
-
 const prefix = "-";
 
 client.on('message', message => {
@@ -29,6 +16,11 @@ client.on('message', message => {
     
     let args = message.content.split(" ").slice(1);
     
+    let msg = message.content.toUpperCase();
+    let sender = message.author;
+    let count = message.content.slice(prefix.length).split(" ");
+    let args = cont.slice(1);
+    
     if (command === "say") {
         message.channel.sendMessage(args.join(" "));
     }
@@ -36,6 +28,26 @@ client.on('message', message => {
     if (command === "ping") {
     	message.reply("**Internet di stabilkan !!**");
   	}
+    
+     if (msg.startsWith(prefix + 'PURGE')) {
+         async function purge() {
+             message.delete();
+     if  (!message.member.roles.find("name", "bot-commander")) {
+         message.channel.send('You need the \`bot-commander\` role to use this command.');
+         return;
+     }
+     if (isNaN(args[0])) {
+         message.channel.send('Please use a number as your arguments. \n Usage: ' + prefix + 'purge <amount>');
+         return;
+    }
+    const fetched = await message.channel.fetchMessages({limit: args[0]});
+    console.log(fetched.size + ' messages found, deleting...');
+    message.channel.bulkDelete(fetched)
+            .catch(error => message.channel.send(`Error: ${error}`));
+    }
+         purge();
+         
+     }
 });
 
 // THIS  MUST  BE  THIS  WAY
