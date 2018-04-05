@@ -13,6 +13,8 @@ client.on('message', message => {
     let sender = message.author;
     let cont = message.content.slice(prefix.length).split(" ");
     let args = cont.slice(1);
+    
+    let args = message.content.split(" ").slice(1);
 
 
     if (msg === prefix + 'PING') { 
@@ -21,7 +23,11 @@ client.on('message', message => {
 
     }
     
-        if (msg === prefix + 'INVITE') { 
+    if (msg === prefix + 'SAY') {
+        message.channel.sendMessage(args.join(" "));
+    
+    
+    if (msg === prefix + 'INVITE') { 
 
         message.channel.send('```Kamu ingin invite bot ini ke server kamu ? \n Silahkan masuk ke link dibawah```');
         message.channel.send('Invite link: \n https://discordapp.com/oauth2/authorize?client_id=430984607832211456&scope=bot&permissions=8');
