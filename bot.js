@@ -17,7 +17,7 @@ client.on('message', message => {
 
     if (msg === prefix + 'PING') { 
 
-        message.channel.send('Ping!'); 
+        message.reply('**Ping telah distabilkan** !!'); 
 
     }
     
