@@ -24,9 +24,12 @@ client.on('message', message => {
     
     if (msg === prefix + 'INFO') { 
 
-        message.channel.send('```css \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n Hai. selamat datang di HyPerter [BOT] \n Bot ini masih dalam uji test jadi tolong supportnya ya :D \n \n Created by: VerterID \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-```'); 
+        message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n Hai. selamat datang di HyPerter [BOT] \n BOT ini masih dalam tahap pengembangan dalam UJI TEST \n jadi mohon maaf jika masih ada kekurangan dalam BOT ini \n \n Created by: VerterID#8300 \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-```'); 
         
     }
+    
+    if (msg === prefix + 'HELP') {
+        message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n ~Clear = Untuk membersihkan chat di channel ! \n ~Ping = Untuk menyetabilkan ping kamu ! \n \n Jika kamu perlu bantuan ketikan command: ~help \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ```');
 
 
     if (msg.startsWith(prefix + 'PURGE')) { 
