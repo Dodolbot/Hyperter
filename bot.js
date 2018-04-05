@@ -38,10 +38,11 @@ client.on('message', message => {
             }
 
             const fetched = await message.channel.fetchMessages({limit: args[0]}); 
-            console.log(fetched.size + ' messages found, deleting...'); 
+            console.log(fetched.size + ' messages found, deleting...');
 
             message.channel.bulkDelete(fetched)
                 .catch(error => message.channel.send(`Error: ${error}`)); 
+            message.channel.send('succes'); 
 
         }
 
