@@ -21,6 +21,10 @@ client.on('message', message => {
    
     }
     
+    if (msg === prefix + 'SAY') {
+        message.channel.sendMessage(args.join(" "));
+     
+    }
     
     if (msg === prefix + 'INVITE') { 
 
