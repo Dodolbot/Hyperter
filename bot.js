@@ -69,6 +69,7 @@ client.on('message', message => {
     }
     
 client.on('message', message => {
+    
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;
     
@@ -77,7 +78,7 @@ client.on('message', message => {
     
     let args = message.content.split(" ").slice(1);
 
-    if (msg === prefix + 'SAY') {
+    if (command === 'SAY') {
         message.channel.sendMessage(args.join(" "));
     }
     
