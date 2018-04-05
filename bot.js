@@ -33,7 +33,7 @@ client.on('message', message => {
      
     }
 
-    if (msg.startsWith(prefix + 'PURGE')) { 
+    if (msg.startsWith(prefix + 'CLEAR')) { 
 
         async function purge() {
             message.delete(); 
