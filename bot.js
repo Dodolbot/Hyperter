@@ -18,11 +18,6 @@ client.on('message', message => {
     if (msg === prefix + 'PING') { 
 
         message.reply('**Ping telah distabilkan** !!'); 
-   
-    }
-    
-    if (msg === prefix + 'SAY') {
-        message.channel.sendMessage(args.join(" "));
      
     }
     
