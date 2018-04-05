@@ -24,7 +24,7 @@ client.on('message', message => {
     
     if (msg === prefix + 'INFO') { 
 
-        message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n Hai. selamat datang di HyPerter [BOT] \n Bot ini masih dalam uji test jadi tolong supportnya ya :D \n \n Created by: VerterID \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-'); 
+        message.channel.send('```css \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n Hai. selamat datang di HyPerter [BOT] \n Bot ini masih dalam uji test jadi tolong supportnya ya :D \n \n Created by: VerterID \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-```'); 
         
     }
 
