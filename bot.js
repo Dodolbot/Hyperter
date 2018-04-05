@@ -42,7 +42,7 @@ client.on('message', message => {
 
             message.channel.bulkDelete(fetched)
                 .catch(error => message.channel.send(`Error: ${error}`)); 
-            message.channel.send('succes'); 
+            message.channel.send('```Chat telah di bersihkan !```'); 
 
         }
 
