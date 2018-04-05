@@ -11,8 +11,11 @@ client.on('message', message => {
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
     
-    if (message.content.startsWith(prefix + "ping")) {
-    	message.channel.sendMessage('pong');
+    let command = message.content.split(" ")[0];
+    command = command.slice(prefix.lenth);
+    
+    if (command === "ping") {
+    	message.channel.sendMessage("pong");
   	}
 });
 
