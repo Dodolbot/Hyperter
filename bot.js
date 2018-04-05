@@ -43,7 +43,8 @@ client.on('message', message => {
     
     if (msg === prefix + 'UPDATE') {
         message.channel.send('``` Feature baru akan diperbarui! \n Tanggal: 06-04-2018 \n Pukul: 14:00 \n\n Terimakasih Telah menggunakan bot ini```')
-
+    }
+    
     if (msg.startsWith(prefix + 'CLEAR')) { 
 
         async function purge() {
