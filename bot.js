@@ -43,7 +43,7 @@ client.on('message', message => {
     }
     
     if (msg === prefix + 'HELP') {
-        message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n -Clear   = Untuk membersihkan chat di channel ! \n -Ping    = Untuk menyetabilkan ping kamu ! \n -Invite  = Untuk menginvite bot ini ke server kamu !\n -Info    = Untuk mengetahui info tentang Hyperter ! \n -Update  = Untuk cek update BOT feature baru !\n \n Jika kamu perlu bantuan ketikan command: -help \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ```');
+        message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n -Clear   = Untuk membersihkan chat di channel ! \n -Ping    = Untuk menyetabilkan ping kamu ! \n -Avatar  = Melihatkan avatar kamu dengan HD !\n\n -Invite  = Untuk menginvite bot ini ke server kamu !\n -Info    = Untuk mengetahui info tentang Hyperter ! \n -Update  = Untuk cek update BOT feature baru !\n \n Jika kamu perlu bantuan ketikan command: -help \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ```');
      
     }
     
