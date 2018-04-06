@@ -75,4 +75,13 @@ client.on('message', message => {
     
 });
 
+client.on('message', message => {
+    
+    if(message.content === 'Avatar') {
+        
+        message.reply(message.author.avatarURL);
+    }
+});
+
+
 client.login(process.env.BOT_TOKEN);
