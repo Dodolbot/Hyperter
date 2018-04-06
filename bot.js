@@ -22,6 +22,11 @@ client.on('message', message => {
      
     }
     
+    if (message.content.startsWith(prefix + 'send')) {
+    client.channels.get('431726383979429888').sendMessage('``Jangan Lupa untuk selalu support channel ini :) \n Agar terus berkembang dan selalu aktif ! \n\n NB: Kerjasama kalian lah yang berarti bagi kami``');
+    
+    }
+    
     if(msg === prefix + 'AVATAR') {
         
         message.reply(message.author.avatarURL);
