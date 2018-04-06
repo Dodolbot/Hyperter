@@ -18,7 +18,7 @@ client.on('message', message => {
     
     if (msg === prefix + 'PING') { 
 
-        message.channel.sendMessage(`Pong! \`${Date.now() - message.createdTimestamp} ms\``);
+        message.channel.sendMessage(`**Ping kamu mencapay** \`${Date.now() - message.createdTimestamp} ms\``);
      
     }
     
