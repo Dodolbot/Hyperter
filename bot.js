@@ -24,19 +24,19 @@ client.on('message', message => {
      
     } else
 	
-	if (message.content.startsWith(prefix + 'setgame')) {
-		if (!result) {
-			result = null;
-		}
-		client.user.setGame(result);
-	} else
+    if (message.content.startsWith(prefix + 'setgame')) {
+	if (!result) {
+		result = null;
+	}
+	client.user.setGame(result);
+    } else
 
-	if (message.content.startsWith(prefix + 'setstatus')) {
-		if (!result) {
-			result = 'online';
-		}
-		client.user.setStatus(result);
-	} else
+    if (message.content.startsWith(prefix + 'setstatus')) {
+	if (!result) {
+		result = 'online';
+	}
+	client.user.setStatus(result);
+    } else
     
     if (message.content.startsWith(prefix + 'send')) {
 	client.channels.get('430359702753247235').sendMessage('```Jangan lupa untuk mengundang temanmu kesini ya :)```');
