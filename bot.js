@@ -22,6 +22,12 @@ client.on('message', message => {
      
     }
     
+    if(msg === 'Avatar') {
+        
+        message.reply(message.author.avatarURL);
+            
+    }
+    
     if (msg === prefix + 'INVITE') { 
 
         message.channel.send('```Kamu ingin invite bot ini ke server kamu ? \n Silahkan masuk ke link dibawah```');
