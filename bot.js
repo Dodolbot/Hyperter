@@ -4,8 +4,8 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
     
-client.setGame("In 100 server");
-client.userStatus("Online");
+client.user.setGame("In 100 server");
+client.user.userStatus("Online");
     
 });
 
