@@ -22,7 +22,7 @@ client.on('message', message => {
      
     }
     
-    if(msg === 'Avatar') {
+    if (msg === 'AVATAR') {
         
         message.reply(message.author.avatarURL);
             
