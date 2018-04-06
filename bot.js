@@ -15,60 +15,62 @@ client.on('message', message => {
     let cont = message.content.slice(prefix.length).split(" ");
     let args = cont.slice(1);
     
+    var result = args.join(' ');
+
     
     if (msg === prefix + 'PING') { 
 
         message.channel.sendMessage(`**Ping kamu mencapay** \`${Date.now() - message.createdTimestamp} ms\``);
      
-    }
+    } else
 	
-    if (message.content.startsWith(prefix + 'setgame')) {
-       if (!result) {
-		result = null;
-	}
+	if (message.content.startsWith(prefix + 'setgame')) {
+		if (!result) {
+			result = null;
+		}
 		client.user.setGame(result);
-    }
-	
-    if (message.content.startsWith(prefix + 'setstatus')) {
-        if (!result) {
+	} else
+
+	if (message.content.startsWith(prefix + 'setstatus')) {
+		if (!result) {
 			result = 'online';
-	}
+		}
 		client.user.setStatus(result);
-    }
+	} else
     
     if (message.content.startsWith(prefix + 'send')) {
 	client.channels.get('430359702753247235').sendMessage('```Jangan lupa untuk mengundang temanmu kesini ya :)```');
         
-    }
+    } else
     
     if (msg === prefix + 'AVATAR') {
         
         message.reply(message.author.avatarURL);
             
-    }
+    } else
     
     if (msg === prefix + 'INVITE') { 
 
         message.channel.send('```Kamu ingin invite bot ini ke server kamu ? \n Silahkan masuk ke link dibawah```');
         message.channel.send('Invite link: \n https://discordapp.com/oauth2/authorize?client_id=431480846776533003&scope=bot&permissions=8');
 
-    }
+    } else
     
     
     if (msg === prefix + 'INFO') { 
 
         message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n Hai. selamat datang di Classy [BOT] \n BOT ini masih dalam tahap pengembangan dalam UJI TEST \n jadi mohon maaf jika masih ada kekurangan dalam BOT ini \n \n Created by: Classy Luck#8300 \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-```'); 
         
-    }
+    } else
     
     if (msg === prefix + 'HELP') {
         message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n -Clear   = Untuk membersihkan chat di channel ! \n -Ping    = Untuk menyetabilkan ping kamu ! \n -Avatar  = Melihatkan avatar kamu dengan HD !\n\n -Invite  = Untuk menginvite bot ini ke server kamu !\n -Info    = Untuk mengetahui info tentang Hyperter ! \n -Update  = Untuk cek update BOT feature baru !\n \n Jika kamu perlu bantuan ketikan command: -help \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ```');
      
-    }
+    } else
     
     if (msg === prefix + 'UPDATE') {
         message.channel.send('``` Feature baru akan diperbarui! \n Tanggal: 06-04-2018 \n Pukul: 14:00 \n\n Terimakasih Telah menggunakan bot ini```')
-    }
+    } else
     
     if (msg.startsWith(prefix + 'CLEAR')) { 
 
