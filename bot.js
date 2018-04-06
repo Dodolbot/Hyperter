@@ -22,6 +22,11 @@ client.on('message', message => {
      
     }
     
+    if (message.content.startsWith(prefix + 'send')) {
+	client.channels.get('chat').sendMessage('```Jangan lupa untuk selalu support bot kami :)```');
+        
+    }
+    
     if (msg === prefix + 'AVATAR') {
         
         message.reply(message.author.avatarURL);
