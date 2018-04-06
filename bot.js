@@ -23,7 +23,7 @@ client.on('message', message => {
     }
     
     if (message.content.startsWith(prefix + 'send')) {
-	client.channels.get('#chat').sendMessage('```Jangan lupa untuk selalu support bot kami :)```');
+	client.channels.get('430359702753247235').sendMessage('```Jangan lupa untuk mengundang temanmu kesini ya :)```');
         
     }
     
