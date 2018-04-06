@@ -18,7 +18,7 @@ client.on('message', message => {
     
     if (msg === prefix + 'PING') { 
 
-        message.channel.sendMessage(`**Hasil Test ping kamu =>** \`${Date.now() - message.createdTimestamp} ms\``);
+        message.reply(`**Hasil Test ping kamu =>** \`${Date.now() - message.createdTimestamp} ms\``);
      
     }
     
