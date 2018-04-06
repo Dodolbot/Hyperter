@@ -18,7 +18,7 @@ client.on('message', message => {
     
     if (msg === prefix + 'PING') { 
 
-        message.reply('**Ping telah distabilkan** !!'); 
+        message.channel.sendMessage(`Pong! \`${Date.now() - message.createdTimestamp} ms\``);
      
     }
     
