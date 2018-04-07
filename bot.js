@@ -27,7 +27,7 @@ client.on('message', message => {
 	.addField("waeaw", bot.user.username);
 	    
 	    return.message.channel.send(botembed);
-    }
+     }
     
         if (msg ==='HALLO') { 
 
