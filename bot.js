@@ -19,15 +19,11 @@ client.on('message', message => {
    
     
     if (msg === prefix + 'PING') { 
-    
-        let ping = Date.now() - message.createdTimestamp
-	let embed = new Discord.RichEmbed()
-	.setTitle('aweaw')
-	.setDescription('aweawewaewaea')
-	.setColor(#FF0000')
-       message.channel.send({embed})
+	   let embed = new Discord.RichEmbed()
+	   .setTitle('Blah')
+	  message.channel.send({embed})
 	    
-     }
+    }
     
         if (msg ==='HALLO') { 
 
