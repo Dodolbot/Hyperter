@@ -59,7 +59,7 @@ client.on('message', message => {
      
     }
     if (msg === prefix + 'AVATAR') {
-	message.reply(message.myUser.avatarURL);
+	message.reply(message.user.avatarURL);
     }
     
     if (msg === prefix + 'UPDATE') {
