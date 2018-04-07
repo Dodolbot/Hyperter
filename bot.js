@@ -40,20 +40,17 @@ client.on('message', message => {
     
     }
     
-    if(msg === prefix + 'AVATAR') {
-    request.get(message.content.substr(11)).pipe(fs.createWriteStream('./setavatar.png'));
-    client.user.setAvatar(fs.readFileSync('./setavatar.png')).then(user => { message.channel.send('✔ Operation successful'); console.log('New Avatar set!'); })
-        .catch((error) => { message.channel.send('× Operation failed'); console.log('Error on setavatar command:', error); });
-    
-    return;
-}
-    
     if (msg === prefix + 'INVITE') { 
 
         message.channel.send('```want to invite this bot to your server? \n\n Please go to the link below```');
         message.channel.send('Invite link: \n https://discordapp.com/oauth2/authorize?client_id=432115612655943680&scope=bot&permissions=8');
 
     }
+     if(msg === 'LOL') {
+     const m = await message.channel.send("Ping?");
+     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+		  
+   }
     
     
     if (msg === prefix + 'INFO') { 
