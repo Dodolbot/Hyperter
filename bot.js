@@ -16,13 +16,14 @@ client.on('message', message => {
     let sender = message.author;
     let cont = message.content.slice(prefix.length).split(" ");
     let args = cont.slice(1);
-    
+   
     
     if (msg === prefix + 'PING') { 
-
+    
+        let ping = Date.now() - message.createdTimestamp
         message.channel.send({embed:{
             title:"this is your ping test result",
-            description: " Pong :v ",
+            description: "${pings}",
             color: 0x33C1FF
             
         }})
