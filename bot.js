@@ -4,7 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
 
-    client.user.setActivity("TEKSNYA", {type: "Prefix use -"});
+    client.user.setActivity("Prefix use -", {type: "PLAYING"});
     
 });
 
@@ -20,7 +20,7 @@ client.on('message', message => {
     
     if (msg === prefix + 'PING') { 
 
-        message.reply('```**PONG** :ping_pong: : \`${Date.now() - message.createdTimestamp} ms\```');
+        message.reply(``**PONG** :ping_pong: : `\`${Date.now() - message.createdTimestamp} ms\``);
      
     }
     
