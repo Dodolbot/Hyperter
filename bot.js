@@ -73,7 +73,7 @@ client.on('message', message => {
             }
 
             if (isNaN(args[0])) {
-                message.channel.send('```Use the command correctly. \n Example: ' + prefix + 'Clear <angka>```'); 
+                message.channel.send('```Use the command correctly. \n Example: ' + prefix + 'Clear <2 - 100>```'); 
                 return;
             }
 
@@ -82,7 +82,7 @@ client.on('message', message => {
 
             message.channel.bulkDelete(fetched)
                 .catch(error => message.channel.send(`Error: ${error}`)); 
-            message.channel.send('```Chat telah di bersihkan !```'); 
+            message.channel.send('```Chat has been cleared !```'); 
 
         }
 
