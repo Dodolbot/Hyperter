@@ -49,7 +49,7 @@ message.channel.send({embed: {
       text: "© Example"
     }
   }
-});
+})
     
         if (msg ==='HALLO') { 
 
