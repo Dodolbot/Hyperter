@@ -34,7 +34,7 @@ client.on('message', message => {
            author: {
              name: client.user.username,
              icon_url: client.user.avatarURL
-    }
+    }})
     
         if (msg ==='HALLO') { 
 
