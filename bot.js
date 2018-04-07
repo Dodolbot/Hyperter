@@ -20,12 +20,10 @@ client.on('message', message => {
     
     if (msg === prefix + 'PING') { 
 
-        message.channel.send({embed:{
-            title: "this is your ping test result!",
-            description: "Succes",
-            color: 0x33C1FF
+        message.channel.send(`**PONG** :ping_pong: : \`${Date.now() - message.createdTimestamp} ms\``);
+
      
-    }})
+    }
     
         if (msg ==='HALLO') { 
 
