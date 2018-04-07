@@ -25,7 +25,7 @@ client.on('message', message => {
             description: "Succes",
             color: 0x33C1FF
      
-    }})
+    }});
     
         if (msg ==='HALLO') { 
 
