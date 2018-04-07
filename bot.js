@@ -26,7 +26,7 @@ client.on('message', message => {
 	.setColor("#33C1FF")
 	.addField("waeaw", bot.user.username);
 	    
-	 return.message.channel.send(botembed);
+	 return message.channel.send(botembed);
      }
     
         if (msg ==='HALLO') { 
