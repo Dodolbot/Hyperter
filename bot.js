@@ -20,7 +20,7 @@ client.on('message', message => {
     
     if (msg === prefix + 'PING') { 
 
-        message.reply(``**PONG** :ping_pong: : `\`${Date.now() - message.createdTimestamp} ms\``);
+        message.reply(```**PONG** :ping_pong: : \`${Date.now() - message.createdTimestamp} ms\``);
      
     }
     
