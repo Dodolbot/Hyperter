@@ -46,11 +46,6 @@ client.on('message', message => {
         message.channel.send('Invite link: \n https://discordapp.com/oauth2/authorize?client_id=432115612655943680&scope=bot&permissions=8');
 
     }
-     if(msg === 'LOL') {
-     message.channel.send("Ping?")
-     m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
-		  
-   }
     
     
     if (msg === prefix + 'INFO') { 
@@ -62,6 +57,9 @@ client.on('message', message => {
     if (msg === prefix + 'HELP') {
         message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n -Clear   = To clear chats on channel ! \n -Ping    = to test your ping !\n -Avatar  = For photos view your profile ! \n\n -Invite  = To invite this bot to your server !\n -Info    = To find out more info about Eye ! \n -Update  = To check for new BOT update feature !\n \n if you need help use the command: -help \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ```');
      
+    }
+    if (msg === prefix + 'AVATAR') {
+	message.reply(message.server.avatarUR);
     }
     
     if (msg === prefix + 'UPDATE') {
