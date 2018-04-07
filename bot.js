@@ -21,7 +21,7 @@ client.on('message', message => {
     if (msg === prefix + 'PING') { 
 	   let ping = Date.now() - message.createdTimestamp
 	   let embed = new Discord.RichEmbed()
-	   .setTitle(':ping_pong: PONG !')
+	   .setTitle(':ping_pong: PING ! PONG !')
 	   .addField('Latency',`${ping}ms`, true)
 	   .setColor('#33C1FF')
 	  message.channel.send({embed})
@@ -40,8 +40,12 @@ client.on('message', message => {
     }
     
     if(msg === prefix + 'AVATAR') {
-        
-        message.reply(message.author.avatarURL);
+          let embed = new Discord.RichEmbed()
+	  .setTitle('Avatar User')
+          .addField(`[LINK AVATAR](message.author.avatarURL)`, true)
+	  .setColor('#33C1FF')
+	  message.channel.send({embed})
+
     }
     
     if (msg === prefix + 'INVITE') { 
