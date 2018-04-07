@@ -21,7 +21,7 @@ client.on('message', message => {
     if (msg === prefix + 'PING') { 
 	   let ping = Date.now() - message.createdTimestamp
 	   let embed = new Discord.RichEmbed()
-	   .setTitle('PONG :ping_pong:\n\n')
+	   .setTitle('PONG :ping_pong:')
 	   .setDescription(`${ping}`)
 	   .setColor('#33C1FF')
 	  message.channel.send({embed})
