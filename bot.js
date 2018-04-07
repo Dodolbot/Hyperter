@@ -27,30 +27,7 @@ client.on('message', message => {
 	  message.channel.send({embed})
 	   
     }
-	
-    if(msg === prefix + 'REPORT') {
-      message.reply("Usage: !report <user> <reason>");
-      return;
-    }
-    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!rUser) return errors.cantfindUser(message.channel);
-    let rreason = args.join(" ").slice(22);
-    if(!rreason) return errors.noReason(message.channel);
 
-    let reportEmbed = new Discord.RichEmbed()
-    .setDescription("Reports")
-    .setColor(orange)
-    .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
-    .addField("Reported By", `${message.author} with ID: ${message.author.id}`)
-    .addField("Channel", message.channel)
-    .addField("Time", message.createdAt)
-    .addField("Reason", rreason);
-
-    let reportschannel = message.guild.channels.find(`name`, "reports");
-    if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
-    reportschannel.send(reportEmbed);
-
-}
     
         if (msg ==='HALLO') { 
 
@@ -64,13 +41,12 @@ client.on('message', message => {
     }
     
     if(msg === prefix + 'AVATAR') {
-          let embed = new Discord.RichEmbed()
-	  .setTitle('Avatar User')
-          .addField(`[LINK AVATAR](message.author.avatarURL)`, true)
-	  .setColor('#33C1FF')
-	  message.channel.send({embed})
-
-    }
+    request.get(message.content.substr(11)).pipe(fs.createWriteStream('./setavatar.png'));
+    client.user.setAvatar(fs.readFileSync('./setavatar.png')).then(user => { message.channel.send('✔ Operation successful'); console.log('New Avatar set!'); })
+        .catch((error) => { message.channel.send('× Operation failed'); console.log('Error on setavatar command:', error); });
+    
+    return;
+}
     
     if (msg === prefix + 'INVITE') { 
 
