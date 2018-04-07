@@ -23,7 +23,7 @@ client.on('message', message => {
 	   let embed = new Discord.RichEmbed()
 	   .setTitle('PONG :ping_pong:')
 	   .setDescription('aweawe')
-	   .addfield('awe','waeaw', true)
+	   .addField("awe","waeaw", true)
 	   .setColor('#33C1FF')
 	  message.channel.send({embed})
 	    
