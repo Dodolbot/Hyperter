@@ -68,9 +68,6 @@ client.on('message', message => {
         async function purge() {
             message.delete(); 
 
-            if (!message.member.roles.find("name", "LEADER")) { 
-                message.channel.send('Kamu membutuhkan ROLE \`LEADER\` untuk menggunakan command ini.'); 
-                return; 
             }
 
             if (isNaN(args[0])) {
