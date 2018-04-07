@@ -68,12 +68,12 @@ client.on('message', message => {
         async function purge() {
             message.delete(); 
             if (!message.member.roles.find("name", "Developer")) { 
-                message.channel.send('You need the \`Depelover\` role to use this command.'); 
+                message.channel.send('You need the \`Develover\` role to use this command.'); 
                 return;
             }
 
             if (isNaN(args[0])) {
-                message.channel.send('```Gunakan command dengan benar. \n Contoh: ' + prefix + 'Clear <angka>```'); 
+                message.channel.send('```Use the command correctly. \n Example: ' + prefix + 'Clear <angka>```'); 
                 return;
             }
 
