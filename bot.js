@@ -21,16 +21,13 @@ client.on('message', message => {
     if (msg === prefix + 'PING') { 
     
         let ping = Date.now() - message.createdTimestamp
-        message.channel.send({embed:{
-            title:"this is your ping test result",
-	    name:"rpwps",
-            description: `n${ping}`,
-            color: 0x33C1FF
-            
-        }})
-
-     
-    }
+        message.channel.send({embed: {
+          color: 3447003,
+          author: {
+          name: client.user.username,
+          icon_url: client.user.avatarURL
+	  }
+	}
     
         if (msg ==='HALLO') { 
 
