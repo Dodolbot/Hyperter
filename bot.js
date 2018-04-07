@@ -21,12 +21,12 @@ client.on('message', message => {
     if (msg === prefix + 'PING') { 
     
         let ping = Date.now() - message.createdTimestamp
-	const embed = new Discord.RichEmbed()
-	.setColor(0x954D23)
-	.setTitle("Command List:")
-	.addField("!help", "Will give the current command list")
-	.addField("!ping", "WIll show the ping time for the bot")
-	.message.channel.send({embed})
+	let botembed = new Discord.RichEmbed()
+	.setdescription("aweaweaweawe")
+	.setColor("#33C1FF")
+	.addField("waeaw", bot.user.username);
+	    
+	    return.message.channel.send(botembed);
     }
     
         if (msg ==='HALLO') { 
