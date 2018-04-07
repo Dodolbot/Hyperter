@@ -18,13 +18,13 @@ client.on('message', message => {
     
     if (msg === prefix + 'PING') { 
 
-        message.reply(`**Hasil Test ping kamu =>** \`${Date.now() - message.createdTimestamp} ms\``);
+        message.reply(`**PONG** :ping_pong: : \`${Date.now() - message.createdTimestamp} ms\``);
      
     }
     
         if (msg ==='HALLO') { 
 
-        message.reply('`Hallo juga sayangku :*`');
+        message.reply('`Hallo juga`');
             
      }
     
@@ -48,7 +48,7 @@ client.on('message', message => {
     
     if (msg === prefix + 'INFO') { 
 
-        message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n Hai. selamat datang di Eye [BOT] \n BOT ini masih dalam tahap pengembangan dalam UJI TEST \n jadi mohon maaf jika masih ada kekurangan dalam BOT ini \n \n Created by: Alfian Verter#8300 \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-```'); 
+        message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n\n Masih Di test :v \n\n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-```'); 
         
     }
     
@@ -58,7 +58,7 @@ client.on('message', message => {
     }
     
     if (msg === prefix + 'UPDATE') {
-        message.channel.send('``` Feature baru akan diperbarui! \n Tanggal: 06-04-2018 \n Pukul: 14:00 \n\n Terimakasih Telah menggunakan bot ini```')
+        message.channel.send('``` Belum di update :v```')
     }
     
     if (msg.startsWith(prefix + 'CLEAR')) { 
