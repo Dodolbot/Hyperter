@@ -42,8 +42,8 @@ client.on('message', message => {
     
     if (msg === prefix + 'INVITE') { 
 
-        message.channel.send('```Kamu ingin invite bot ini ke server kamu ? \n Silahkan masuk ke link dibawah```');
-        message.channel.send('Invite link: \n https://discordapp.com/oauth2/authorize?client_id=431480846776533003&scope=bot&permissions=8');
+        message.channel.send('```want to invite this bot to your server? \n\n Please go to the link below```');
+        message.channel.send('Invite link: \n https://discordapp.com/oauth2/authorize?client_id=432115612655943680&scope=bot&permissions=8');
 
     }
     
@@ -55,7 +55,7 @@ client.on('message', message => {
     }
     
     if (msg === prefix + 'HELP') {
-        message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n -Clear   = Untuk membersihkan chat di channel ! \n -Ping    = Untuk menyetabilkan ping kamu !\n -Avatar  = Untuk melihatkan profilkamu HD ! \n\n -Invite  = Untuk menginvite bot ini ke server kamu !\n -Info    = Untuk mengetahui info tentang Hyperter ! \n -Update  = Untuk cek update BOT feature baru !\n \n Jika kamu perlu bantuan ketikan command: -help \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ```');
+        message.channel.send('```-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \n -Clear   = To clear chats on channel ! \n -Ping    = to test your ping !\n -Avatar  = For photos view your profile ! \n\n -Invite  = To invite this bot to your server !\n -Info    = To find out more info about Eye ! \n -Update  = To check for new BOT update feature !\n \n if you need help use the command: -help \n -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ```');
      
     }
     
