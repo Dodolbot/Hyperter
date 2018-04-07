@@ -20,7 +20,9 @@ client.on('message', message => {
     
     if (msg === prefix + 'PING') { 
 	   let embed = new Discord.RichEmbed()
-	   .setTitle('Blah')
+	   .setTitle('PONG :ping_pong:')
+	   .setDescription('tes')
+	   .setColor('#33C1FF')
 	  message.channel.send({embed})
 	    
     }
