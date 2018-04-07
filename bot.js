@@ -22,7 +22,8 @@ client.on('message', message => {
 	   let ping = Date.now() - message.createdTimestamp
 	   let embed = new Discord.RichEmbed()
 	   .setTitle('PONG :ping_pong:')
-	   .addfield(' ',' ',' ',' ', true)
+	   .setDescription('aweawe')
+	   .addfield('awe','waeaw', true)
 	   .setColor('#33C1FF')
 	  message.channel.send({embed})
 	    
