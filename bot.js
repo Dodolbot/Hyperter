@@ -68,7 +68,7 @@ client.on('message', message => {
         async function purge() {
             message.delete(); 
             if (!message.member.roles.find("name", "Developer")) { 
-                message.channel.send('You need the \`Develover\` role to use this command.'); 
+                message.channel.send('You need the \`Developer\` role to use this command.'); 
                 return;
             }
 
