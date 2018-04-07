@@ -23,7 +23,7 @@ client.on('message', message => {
         let ping = Date.now() - message.createdTimestamp
         message.channel.send({embed:{
             title:"this is your ping test result",
-            description: "${pings}",
+            description: `${pings}`,
             color: 0x33C1FF
             
         }})
