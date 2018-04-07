@@ -21,8 +21,8 @@ client.on('message', message => {
     if (msg === prefix + 'PING') { 
 
         message.channel.send({embed:{
-            title:"this is your ping test result!"
-            description:"Test",
+            title: "this is your ping test result!"
+            description: "Test",
             color: 0x33C1FF
      
     }})
